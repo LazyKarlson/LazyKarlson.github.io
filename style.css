@@ -42,7 +42,7 @@ h1, h2, h3, h4 {
 /* Slots for final card positions */
  
 #cardSlots {
-  margin: 0 auto 0 20px;
+  margin: 0 auto 0 5px;
   background: #ddf;
 }
  
@@ -54,7 +54,7 @@ h1, h2, h3, h4 {
 }
  
 #cardSlots, #cardPilot {
-  width: 260px;
+  width: 150px;
   height: 800px;
   padding: 20px;
   float: left;
@@ -71,7 +71,7 @@ h1, h2, h3, h4 {
  
 #cardSlots div, #cardPilot div {
   float: left;
-  width: 240px;
+  width: 130px;
   height: 20px;
   padding: 2px;  
   border: 1px solid #333;
@@ -81,9 +81,31 @@ h1, h2, h3, h4 {
   margin: 5px;
   background: #fff;
 }
+
+#prevRace {
+  margin: 0 auto 0 5px;
+  width: 150px;
+  height: 800px;
+  padding: 20px;
+  float: left;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+}
+
+#prevRace ol, li {
+  padding: 5px 0 5px 10px;
+  font-size: 11px;  
+  text-align: left;  
+}
+
 #cardNames {
-  margin: 0 auto 0 20px;
-  width: 260px;
+  margin: 0 auto 0 5px;
+  width: 150px;
   height: 800px;
   padding: 20px;
   float: left;
@@ -96,7 +118,8 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
 #cardNames ol, li {
-  padding: 5px 0 5px 20px;
+  padding: 5px 0 5px 10px;
+  font-size: 11px;
   user-select:all;
   text-align: left;  
 }
@@ -114,7 +137,7 @@ h1, h2, h3, h4 {
 #cardPilot div {
   background: #666;
   color: #fff;
-  font-size: 14px;
+  font-size: 11px;
   text-shadow: 0 0 3px #000;
 }
  
@@ -122,37 +145,6 @@ h1, h2, h3, h4 {
   -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-}
- 
-/* Individually coloured cards */
- 
-#card1.correct { background: red; }
-#card2.correct { background: brown; }
-#card3.correct { background: orange; }
-#card4.correct { background: yellow; }
-#card5.correct { background: green; }
-#card6.correct { background: cyan; }
-#card7.correct { background: blue; }
-#card8.correct { background: indigo; }
-#card9.correct { background: purple; }
-#card10.correct { background: violet; }
- 
- 
-/* "You did it!" message */
-#successMessage {
-  position: absolute;
-  left: 580px;
-  top: 250px;
-  width: 0;
-  height: 0;
-  z-index: 100;
-  background: #dfd;
-  border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  padding: 20px;
+} 
+
 }
