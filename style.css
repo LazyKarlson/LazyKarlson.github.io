@@ -121,6 +121,8 @@ h1, h2, h3, h4 {
   padding: 5px 0 5px 10px;
   font-size: 11px;
   user-select:all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
   text-align: left;  
 }
  
