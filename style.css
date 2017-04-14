@@ -8,7 +8,7 @@ body {
 /* Give headings their own font */
  
 h1, h2, h3, h4 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: "Arial", "Lucida Grande", sans-serif;
 }
  
 /* Main content area */
@@ -124,8 +124,6 @@ h1, h2, h3, h4 {
   text-align: left;  
 }
  
-
- 
 #cardSlots div.hovered {
   background: #aaa;
 }
@@ -146,5 +144,3 @@ h1, h2, h3, h4 {
   -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 } 
-
-}
