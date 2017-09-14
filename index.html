@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
- 
+
 <title>Список пилотов</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -9,18 +9,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
- 
+
 <script type="text/javascript">
 $( init );
- 
+
 function init() {
- 
+
   $('#cardPilot').html( '' );
   $('#cardSlots').html( '' );
   for ( var i=1; i<11; i++ ) {
   $('#'+i).html( '' );
 }
- 
+
 
   var pilots = [
 'Хэмилтон',
@@ -43,8 +43,8 @@ function init() {
 'Палмер',
 'Эриксон',
 'Верляйн' ];
-  
- 
+
+
   for ( var i=0; i<20; i++ ) {
     $('<div>' + pilots[i] + '</div>').data( 'number', pilots[i] ).attr( 'id', 'card'+pilots[i] ).appendTo( '#cardPilot' ).draggable( {
       containment: '#content',
@@ -53,7 +53,7 @@ function init() {
       revert: true
     } );
   }
- 
+
   var place = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ];
   for ( var i=1; i<=10; i++ ) {
     $('<div>' + place[i-1] + '</div>').data( 'number', i ).appendTo( '#cardSlots' ).droppable( {
@@ -62,7 +62,7 @@ function init() {
       drop: handleCardDrop
     } );
   }
- 
+
 }
 function handleCardDrop( event, ui ) {
   var slotNumber = $(this).data( 'number' );
@@ -72,12 +72,12 @@ function handleCardDrop( event, ui ) {
     ui.draggable.draggable( 'option', 'revert', false );
 }
 </script>
- 
+
 </head>
 <body>
- 
+
 <div id="content">
- 
+
   <div id="cardPilot"> </div>
   <div id="cardSlots"> </div>
   <div id="cardNames">
@@ -100,26 +100,27 @@ function handleCardDrop( event, ui ) {
   <h3>Результаты предыдущей гонки</h3>
   <ol>
 <li>Хэмилтон</li>
+<li>Боттас</li>
 <li>Феттель</li>
 <li>Риккардо</li>
 <li>Райкконен</li>
-<li>Боттас</li>
-<li>Хюлкенберг</li>
-<li>Грожан</li>
-<li>Масса</li>
 <li>Окон</li>
-<li>Сайнс</li>
 <li>Стролл</li>
-<li>Квят</li>
-<li>Палмер</li>
-<li>Вандорн</li>
-<li>Магнуссен</li>
-<li>Эриксон</li>
+<li>Масса</li>
 <li>Перес</li>
-  </ol> 
+<li>Ферстаппен</li>
+<li>Магнуссен</li>
+<li>Квят</li>
+<li>Хюлкенберг</li>
+<li>Сайнс</li>
+<li>Грожан</li>
+<li>Верляйн</li>
+<li>Алонсо</li>
+<li>Эриксон</li>
+  </ol>
   </div>
- <br style="clear: left;" /> 
+ <br style="clear: left;" />
 </div>
- 
+
 </body>
 </html>
