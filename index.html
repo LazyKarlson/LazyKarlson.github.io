@@ -55,8 +55,8 @@ function init() {
     } );
   }
 
-  var place = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ];
-  for ( var i=1; i<=10; i++ ) {
+  var place = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Квалификация', 'Лучший круг' ];
+  for ( var i=1; i<=12; i++ ) {
     $('<div>' + place[i-1] + '</div>').data( 'number', i ).appendTo( '#cardSlots' ).droppable( {
       accept: '#cardPilot div',
       hoverClass: 'hovered',
@@ -94,6 +94,8 @@ function handleCardDrop( event, ui ) {
   <li id="8"></li>
   <li id="9"></li>
   <li id="10"></li>
+  <li id="11"></li>
+  <li id="12"></li>
   </ol>
  <button onclick="init()">Очистить</button>
   </div>
