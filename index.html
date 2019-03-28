@@ -69,7 +69,10 @@ function handleCardDrop( event, ui ) {
   var slotNumber = $(this).data( 'number' );
   var cardNumber = ui.draggable.data( 'number' );
   if (slotNumber == 11){
-  $("#"+slotNumber).html("ЛК" + cardNumber);
+  $("#"+slotNumber).html("К " + cardNumber);
+  }
+  else if (slotNumber == 12){
+  $("#"+slotNumber).html("ЛК " + cardNumber);
   }
   else {
     $("#"+slotNumber).html(cardNumber);
