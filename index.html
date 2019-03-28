@@ -68,7 +68,12 @@ function init() {
 function handleCardDrop( event, ui ) {
   var slotNumber = $(this).data( 'number' );
   var cardNumber = ui.draggable.data( 'number' );
-  $("#"+slotNumber).html(cardNumber);
+  if (slotNumber == 11){
+  $("#"+slotNumber).html("ЛК" + cardNumber);
+  }
+  else {
+    $("#"+slotNumber).html(cardNumber);
+  }
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     ui.draggable.draggable( 'option', 'revert', false );
 }
@@ -94,8 +99,8 @@ function handleCardDrop( event, ui ) {
   <li id="8"></li>
   <li id="9"></li>
   <li id="10"></li>
-  <li id="11">К </li>
-  <li id="12">ЛК </li>
+  <li id="11"></li>
+  <li id="12"></li>
   </ol>
  <button onclick="init()">Очистить</button>
   </div>
