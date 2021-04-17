@@ -40,7 +40,7 @@ for (i = 0; i <= myObj.comments.length; i++) {
 
           if (myObj.comments[i].parent_id == null) {
 
-    document.getElementById("predict").innerHTML += "<p class='user'>"+myObj.comments[i].user.login+"<br>"+dateText+"<br>"+myObj.comments[i].body+"</p><hr>";
+    document.getElementById("predict").innerHTML += "<p class='user'>"+dateText+"<br>"+myObj.comments[i].user.login+"<br>"+myObj.comments[i].body+"</p><hr>";
 }
 }
     
