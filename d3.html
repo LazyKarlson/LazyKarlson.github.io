@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Список прогнозов</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+<form id="frm1">
+  Адрес страницы: <input type="text" id="weburl"><br>
+  <input type="button" onclick="getJSON()" value="Отправить">
+</form>
+
+	<div id="predict"></div>
+
+<script>
+	function getJSON()
+	{
+		var weburl = new URL(document.getElementById("weburl").value);
+		var path = weburl.pathname.replace(/\/+$/, '').split("-");		
+		var post_id = path[path.length-1];
+		
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    var i;
+for (i = 0; i <= myObj.comments.length; i++) {
+    var date = new Date(myObj.comments[i].created*1000);
+    var dateText = date.getDate()+
+          "/"+(date.getMonth()+1)+
+          "/"+date.getFullYear()+
+          " "+date.getHours()+
+          ":"+String(date.getMinutes()).padStart(2, "0")+
+          ":"+date.getSeconds();
+
+          if (myObj.comments[i].parent_id == null) {
+
+    document.getElementById("predict").innerHTML += "<p class='user'>"+myObj.comments[i].user.login+"<br>"+dateText+"<br>"+myObj.comments[i].body+"</p><hr>";
+}
+}
+    
+  }
+};
+xmlhttp.open("GET", "https://d3.ru/api/posts/"+post_id+"/comments/", true);
+xmlhttp.send();
+}
+
+</script>
+</body>
