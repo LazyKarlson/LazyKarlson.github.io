@@ -46,7 +46,7 @@ for (i = 0; i <= myObj.comments.length; i++) {
     
   }
 };
-xmlhttp.open("GET", "https://d3.ru/api/posts/"+post_id+"/comments/", true);
+xmlhttp.open("GET", "https://d3.ru/api/posts/"+post_id+"/comments/?sorting=date_tree", true);
 xmlhttp.send();
 }
 
