@@ -82,7 +82,7 @@ h1, h2, h3, h4 {
   background: #fff;
 }
 
-#prevRace {
+#generated {
   margin: 0 auto 0 5px;
   width: 150px;
   height: 800px;
@@ -97,7 +97,7 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
 
-#prevRace ol, li {
+#generated ol, li {
   padding: 5px 0 5px 10px;
   font-size: 11px;  
   text-align: left;  
@@ -146,3 +146,11 @@ h1, h2, h3, h4 {
   -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 } 
+
+#forecast {
+  font-size: 12px;
+  user-select:all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  text-align: left;  
+}

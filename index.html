@@ -80,6 +80,61 @@ function handleCardDrop( event, ui ) {
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     ui.draggable.draggable( 'option', 'revert', false );
 }
+
+function shuffle(arr){
+  var j, temp;
+  for(var i = arr.length - 1; i > 0; i--){
+    j = Math.floor(Math.random()*(i + 1));
+    temp = arr[j];
+    arr[j] = arr[i];
+    arr[i] = temp;
+  }
+  return arr;
+}
+
+function generateForecast() {
+  var first = [
+  'Хэмилтон',
+  'Боттас',
+  'Ферстаппен',
+  'Перес'];
+
+  var other = [
+  'Норрис',
+  'Риккардо',
+  'Феттель',
+  'Стролл',
+  'Алонсо',
+  'Окон',
+  'Леклер',
+  'Сайнс',
+  'Цунода',
+  'Гасли',
+  'Райкконен',
+  'Джовинацци'];
+
+  var qual = [
+  'Хэмилтон',
+  'Боттас',
+  'Ферстаппен',
+  'Перес',
+  'Леклер'];
+
+  var bestlap = [
+  'Хэмилтон',
+  'Боттас',
+  'Ферстаппен',
+  'Перес'];
+
+  first = shuffle(first);
+  other = shuffle(other).splice(6, 6);
+  var forecast = first.concat(other);
+  forecast = forecast.join('<br>');
+  qual = shuffle(qual).splice(1, 4);
+  bestlap = shuffle(bestlap).splice(1, 3);
+  $("#forecast").html(forecast + "<br><br>" + "К " + qual[0] + "<br>" + "ЛК " + bestlap[0] + "<br>");
+
+}
 </script>
 
 </head>
@@ -107,7 +162,10 @@ function handleCardDrop( event, ui ) {
   </ol>
  <button onclick="init()">Очистить</button>
   </div>
-  <br style="clear: left;" />
+ 
+  <div id="generated"><h3>Генератор прогнозов :)</h3><div id="forecast">Это генератор почти случайного прогноза. Несерьёзный.</div><br><br> <button onclick="generateForecast()">Сгенерировать</button>
+</div>
+
 </div>
 
 </body>
