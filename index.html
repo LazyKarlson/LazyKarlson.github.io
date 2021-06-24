@@ -69,13 +69,13 @@ function handleCardDrop( event, ui ) {
   var slotNumber = $(this).data( 'number' );
   var cardNumber = ui.draggable.data( 'number' );
   if (slotNumber == 11){
-  $("#"+slotNumber).html("К " + cardNumber);
+  $("#"+slotNumber).html("К " + cardNumber + "<br>");
   }
   else if (slotNumber == 12){
-  $("#"+slotNumber).html("ЛК " + cardNumber);
+  $("#"+slotNumber).html("ЛК " + cardNumber + "<br>");
   }
   else {
-    $("#"+slotNumber).html(cardNumber);
+    $("#"+slotNumber).html(cardNumber + "<br>");
   }
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     ui.draggable.draggable( 'option', 'revert', false );
