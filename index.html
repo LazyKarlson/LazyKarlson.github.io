@@ -76,6 +76,11 @@ function handleCardDrop( event, ui ) {
   }
   else {
     $("#"+slotNumber).html(cardNumber + "<br>");
+    for (let i = 1; i < 11; i++) {
+        if (i != slotNumber && $("#"+slotNumber).html() == $("#"+i).html()){
+          alert ("Повтор имени пилота в прогнозе!");
+        }
+    }
   }
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     ui.draggable.draggable( 'option', 'revert', false );
