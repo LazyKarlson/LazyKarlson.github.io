@@ -1,10 +1,10 @@
-body {
-  margin: 30px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  line-height: 1em;
-  color: #333;
+body {    
+
+  background-color: #151515;
+  color: #FFFFFF;
+  font-family: "Arial", "Lucida Grande", sans-serif;
 }
- 
+
 /* Give headings their own font */
  
 h1, h2, h3, h4 {
@@ -13,12 +13,25 @@ h1, h2, h3, h4 {
  
 /* Main content area */
  
-#content {
-  margin: 80px 70px;
+#content { 
+  margin: auto;
   text-align: center;
+  width: 915px;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+
+#flipdown { 
+  margin: auto;  
+}
+
+#countdown { 
+  display: block;
+  margin: auto;  
+  padding-bottom: 10px;
+  font-size: large;
+  text-align: center;
 }
  
 /* Header/footer boxes */
@@ -42,19 +55,27 @@ h1, h2, h3, h4 {
 /* Slots for final card positions */
  
 #cardSlots {
-  margin: 0 auto 0 5px;
+  margin: 5px;
   background: #ddf;
+  color: #151515;
 }
  
 /* The initial pile of unsorted cards */
  
 #cardPilot {
-  margin: 0 auto;
+  margin: 5px;
   background: #ffd;
+  
+}
+
+#cardNames {
+  margin:  5px;  
+  background: #ffd;
+  color: #151515;
 }
  
-#cardSlots, #cardPilot {
-  width: 150px;
+#cardSlots, #cardPilot, #cardNames {
+  width: 250px;
   height: 800px;
   padding: 20px;
   float: left;
@@ -70,10 +91,12 @@ h1, h2, h3, h4 {
 /* Individual cards and slots */
  
 #cardSlots div, #cardPilot div {
-  float: left;
-  width: 130px;
-  height: 20px;
+  display: inline-block;  
+  text-align: center;
+  width: 230px;
+  height: 25px;
   padding: 2px;  
+  line-height: 25px;
   border: 1px solid #333;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -82,44 +105,18 @@ h1, h2, h3, h4 {
   background: #fff;
 }
 
-#generated {
-  margin: 0 auto 0 5px;
-  width: 150px;
-  height: 800px;
-  padding: 20px;
-  float: left;
-  border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-}
 
-#generated ol, li {
-  padding: 5px 0 5px 10px;
-  font-size: 11px;  
+#cardNames li {
+  padding: 5px 0 5px 5px;
+  font-size: 16px;
+  user-select:all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
   text-align: left;  
 }
 
-#cardNames {
-  margin: 0 auto 0 5px;
-  width: 150px;
-  height: 800px;
-  padding: 20px;
-  float: left;
-  border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-}
-#cardNames ol, li {
-  padding: 5px 0 5px 10px;
-  font-size: 11px;
+#cardNames ol { 
+  font-size: 16px;
   user-select:all;
   -moz-user-select: all;
   -webkit-user-select: all;
@@ -137,7 +134,7 @@ h1, h2, h3, h4 {
 #cardPilot div {
   background: #666;
   color: #fff;
-  font-size: 11px;
+  font-size: 14px;
   text-shadow: 0 0 3px #000;
 }
  
@@ -146,11 +143,8 @@ h1, h2, h3, h4 {
   -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 } 
-
-#forecast {
-  font-size: 12px;
-  user-select:all;
-  -moz-user-select: all;
-  -webkit-user-select: all;
-  text-align: left;  
+.remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
 }
