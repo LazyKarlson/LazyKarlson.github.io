@@ -1,4 +1,4 @@
-body {    
+body {
 
   background-color: #151515;
   color: #FFFFFF;
@@ -6,14 +6,17 @@ body {
 }
 
 /* Give headings their own font */
- 
-h1, h2, h3, h4 {
+
+h1,
+h2,
+h3,
+h4 {
   font-family: "Arial", "Lucida Grande", sans-serif;
 }
- 
+
 /* Main content area */
- 
-#content { 
+
+#content {
   margin: auto;
   text-align: center;
   width: 915px;
@@ -22,20 +25,20 @@ h1, h2, h3, h4 {
   user-select: none;
 }
 
-#flipdown { 
-  margin: auto;  
+#flipdown {
+  margin: auto;
 }
 
-#countdown { 
+#countdown {
   display: block;
-  margin: auto;  
+  margin: auto;
   padding-bottom: 10px;
   font-size: large;
   text-align: center;
 }
- 
+
 /* Header/footer boxes */
- 
+
 .wideBox {
   clear: both;
   text-align: center;
@@ -44,37 +47,39 @@ h1, h2, h3, h4 {
   background: #ebedf2;
   border: 1px solid #333;
 }
- 
+
 .wideBox h1 {
   font-weight: bold;
   margin: 20px;
   color: #666;
   font-size: 1.5em;
 }
- 
+
 /* Slots for final card positions */
- 
+
 #cardSlots {
   margin: 5px;
   background: #ddf;
   color: #151515;
 }
- 
+
 /* The initial pile of unsorted cards */
- 
+
 #cardPilot {
   margin: 5px;
   background: #ffd;
-  
+
 }
 
 #cardNames {
-  margin:  5px;  
+  margin: 5px;
   background: #ffd;
   color: #151515;
 }
- 
-#cardSlots, #cardPilot, #cardNames {
+
+#cardSlots,
+#cardPilot,
+#cardNames {
   width: 250px;
   height: 800px;
   padding: 20px;
@@ -87,15 +92,16 @@ h1, h2, h3, h4 {
   -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
- 
+
 /* Individual cards and slots */
- 
-#cardSlots div, #cardPilot div {
-  display: inline-block;  
+
+#cardSlots div,
+#cardPilot div {
+  display: inline-block;
   text-align: center;
   width: 230px;
   height: 25px;
-  padding: 2px;  
+  padding: 2px;
   line-height: 25px;
   border: 1px solid #333;
   -moz-border-radius: 7px;
@@ -109,42 +115,59 @@ h1, h2, h3, h4 {
 #cardNames li {
   padding: 5px 0 5px 5px;
   font-size: 16px;
-  user-select:all;
+  user-select: all;
   -moz-user-select: all;
   -webkit-user-select: all;
-  text-align: left;  
+  text-align: left;
 }
 
-#cardNames ol { 
+#cardNames ol {
   font-size: 16px;
-  user-select:all;
+  user-select: all;
   -moz-user-select: all;
   -webkit-user-select: all;
-  text-align: left;  
+  text-align: left;
 }
- 
+
 #cardSlots div.hovered {
   background: #aaa;
 }
- 
+
 #cardSlots div {
   border-style: dashed;
 }
- 
+
 #cardPilot div {
   background: #666;
   color: #fff;
   font-size: 14px;
   text-shadow: 0 0 3px #000;
 }
- 
+
 #cardPilot div.ui-draggable-dragging {
   -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-} 
+}
+
 .remove {
   position: absolute;
   top: 4px;
   right: 4px;
+}
+
+.logo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.logo a {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
 }

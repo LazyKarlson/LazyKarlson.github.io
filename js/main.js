@@ -26,10 +26,10 @@ function init() {
     'Стролл',
     'Магнуссен',
     'Хюлкенберг',
-    'Вриз',
+    'Де Вриз',
     'Цунода',
     'Сарджент',
-    'Элбон'];
+    'Албон'];
 
 
   for (var i = 0; i < 20; i++) {
@@ -65,23 +65,23 @@ function handleCardDrop(event, ui) {
     $("#" + slotNumber).html(cardNumber + "<br>");
     for (let i = 1; i < 11; i++) {
       if (i != slotNumber && $("#" + slotNumber).html() == $("#" + i).html()) {
-        new Notify ({
-status: 'warning',
-title: 'Внимание!',
-text: 'Повтор имени пилота в прогнозе!',
-effect: 'fade',
-speed: 300,
-customClass: '',
-customIcon: '',
-showIcon: true,
-showCloseButton: true,
-autoclose: true,
-autotimeout: 3000,
-gap: 5,
-distance: 5,
-type: 2,
-position: 'top x-center'
-})
+        new Notify({
+          status: 'warning',
+          title: 'Внимание!',
+          text: 'Повтор имени пилота в прогнозе!',
+          effect: 'fade',
+          speed: 300,
+          customClass: '',
+          customIcon: '',
+          showIcon: true,
+          showCloseButton: true,
+          autoclose: true,
+          autotimeout: 3000,
+          gap: 5,
+          distance: 5,
+          type: 2,
+          position: 'top x-center'
+        })
       }
     }
   }
@@ -110,13 +110,13 @@ function goBack(event) {
   $(this).remove();
 }
 
-document.addEventListener('DOMContentLoaded', () => {  
-  var date = new Date('3/18/2023 17:00:00 UTC');  
+document.addEventListener('DOMContentLoaded', () => {
+  var date = new Date('3/18/2023 17:00:00 UTC');
   var countTo = date.getTime() / 1000;
 
   // Set up FlipDown
   var flipdown = new FlipDown(countTo, {
     theme: "light",
-  }).start();    
+  }).start();
 
 });
