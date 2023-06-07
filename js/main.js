@@ -85,10 +85,10 @@ function handleCardDrop(event, ui) {
       }
     }
   }
-  ui.draggable.position({ of: $(this), my: 'left top', at: 'left top' });
+  ui.draggable.position({of: $(this), my: 'left top', at: 'left top'});
   ui.draggable.draggable('option', 'revert', false);
   if (!ui.draggable.find('.remove').length) {
-    ui.draggable.append($('<button type="button" class="btn btn-default btn-xs remove"><i class="fa fa-trash" aria-hidden="true"></i></button>').click({ param1: slotNumber }, goBack));
+    ui.draggable.append($('<button type="button" class="btn btn-default btn-xs remove"><i class="fa fa-trash" aria-hidden="true"></i></button>').click({param1: slotNumber}, goBack));
   }
 }
 
