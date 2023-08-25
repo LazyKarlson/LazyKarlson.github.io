@@ -111,7 +111,7 @@ function goBack(event) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  var date = new Date('7/22/2023 14:00:00 UTC');
+  var date = new Date('8/26/2023 13:00:00 UTC');
   var countTo = date.getTime() / 1000;
 
   // Set up FlipDown
